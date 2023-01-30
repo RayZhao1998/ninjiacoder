@@ -1,8 +1,23 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { ReactSVG } from "react-svg";
+import SideBar, { HomeTab } from "../components/sidebar";
+import PageContainer from "../components/pagecontainer";
 
 export default function Home() {
+  return (
+    <PageContainer
+      selectedTab={HomeTab}
+      onChangeTab={(tab) => {
+        location.href = tab.selection.route ?? "#";
+      }}
+    >
+      <InnerHome />
+    </PageContainer>
+  );
+}
+
+function InnerHome() {
   return (
     <div className="absolute grid grid-rows-5 grid-cols-12 gap-4 text-white w-8/12 h-3/6 min-w-[50%] max-h-[32rem] left-[16.7%] top-[16.7%]">
       <div
