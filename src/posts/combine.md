@@ -79,8 +79,6 @@ protocol Subscriber {
 ## 参考
 
 1. [Apple Developer Documentation](https://developer.apple.com/documentation/combine/receiving-and-handling-events-with-combine)
-   [Introducing Combine - WWDC 2019 - Videos - Apple Developer](https://developer.apple.com/videos/play/wwdc2019/722/)
-
-[Swift Combine 入门导读](https://www.icodesign.me/posts/swift-combine/)
-
-[The introduction to Reactive Programming you've been missing](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)
+2. [Introducing Combine - WWDC 2019 - Videos - Apple Developer](https://developer.apple.com/videos/play/wwdc2019/722/)
+3. [Swift Combine 入门导读](https://www.icodesign.me/posts/swift-combine/)
+4. [The introduction to Reactive Programming you've been missing](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)
