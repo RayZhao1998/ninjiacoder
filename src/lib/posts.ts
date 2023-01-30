@@ -9,15 +9,15 @@ const postsDirectory = path.join(process.cwd(), "src/posts");
 export async function getSortedPostsData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
-  let allPostsData = []
+  let allPostsData = [];
   for (const fileName of fileNames) {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, "");
 
     // Combine the data with the id
     const data = await getPostData(id);
-    allPostsData.push(data)
-  } 
+    allPostsData.push(data);
+  }
   // Sort posts by date
   return allPostsData.sort((a, b) => {
     if (a.date < b.date) {
@@ -39,7 +39,7 @@ export function getAllPostIds() {
   });
 }
 
-export async function getPostData(id) {
+export async function getPostData(id: string): Promise<any> {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
