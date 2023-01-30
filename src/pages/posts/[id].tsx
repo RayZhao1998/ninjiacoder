@@ -4,7 +4,7 @@ import styles from "@/styles/posts.module.css";
 import React, { useEffect } from "react";
 import hljs from "highlight.js";
 
-export default function Post({ postData }) {
+export default function Post({ postData }: { postData: any }) {
   useEffect(() => {
     hljs.initHighlighting();
   }, []);
@@ -38,7 +38,7 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: { params: any }) {
   const postData = await getPostData(params.id);
   return {
     props: {
