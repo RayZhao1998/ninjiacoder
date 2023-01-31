@@ -48,12 +48,18 @@ function InnerPosts({ posts }: { posts: any }) {
                 location.href = `/posts/${id}`;
               }}
             >
-              <div className="relative">
-                <img src={cover} className="w-full" />
-                <div className="absolute bottom-0 h-1/2 w-full bg-gradient-to-t from-black to-transparent" />
-                <p className="absolute bottom-2 px-4 py-1 font-bold text-xl">
-                  {title}
-                </p>
+              <div className="relative h-auto">
+                {cover ? (
+                  <>
+                    <img src={cover} className="w-full" />
+                    <div className="absolute bottom-0 h-1/2 w-full bg-gradient-to-t from-black to-transparent" />
+                    <p className="absolute bottom-2 px-4 py-1 font-bold text-xl">
+                      {title}
+                    </p>
+                  </>
+                ) : (
+                  <p className="px-4 py-1 font-bold text-xl">{title}</p>
+                )}
               </div>
               <div className="relative px-4">
                 <div

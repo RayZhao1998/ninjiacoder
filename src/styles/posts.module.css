@@ -66,6 +66,7 @@
   margin-left: auto;
   margin-right: auto;
   display: block;
+  max-height: 400px;
 }
 
 .post code {
